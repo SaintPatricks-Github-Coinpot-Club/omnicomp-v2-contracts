@@ -1,0 +1,56 @@
+{
+    "Unitroller": {
+        "description": "Unitroller",
+        "address": "0x0aBBAba95439dAbc12a6bA59E0713a722a05cB31"
+    },
+    "Contracts": {
+        "Unitroller": "0x0aBBAba95439dAbc12a6bA59E0713a722a05cB31",
+        "PriceOracle": "0xc0A716967C95B0044610D40038f789Df5D6b71ee",
+        "Comptroller": "0x0aBBAba95439dAbc12a6bA59E0713a722a05cB31",
+        "WhitePaperInterestRateModel_2_30": "0xa73FEeD42b2D72B876fF9aDC236AdeE803F90732",
+        "WhitePaperInterestRateModel_1_40": "0xd9699f978b364cdB4BDAeDf5eB0c1Bf70af6aCD7"
+    },
+    "Constructors": {
+        "Unitroller": "0x",
+        "PriceOracle": "0x0000000000000000000000000abbaba95439dabc12a6ba59e0713a722a05cb31",
+        "Comptroller": "0x",
+        "WhitePaperInterestRateModel_2_30": "0x00000000000000000000000000000000000000000000000000470de4df8200000000000000000000000000000000000000000000000000000429d069189e0000",
+        "WhitePaperInterestRateModel_1_40": "0x000000000000000000000000000000000000000000000000002386f26fc10000000000000000000000000000000000000000000000000000058d15e176280000"
+    },
+    "Blocks": {
+        "Unitroller": 7996008,
+        "PriceOracle": 7996011,
+        "Comptroller": 7996014,
+        "WhitePaperInterestRateModel_2_30": 7996030,
+        "WhitePaperInterestRateModel_1_40": 7996157
+    },
+    "PriceOracle": {
+        "description": "Price oracle",
+        "address": "0xc0A716967C95B0044610D40038f789Df5D6b71ee"
+    },
+    "Comptroller": {
+        "Comptroller": {
+            "address": "0xd211E0bD143CFcA36884a9D5835311494b040a78",
+            "contract": "Comptroller",
+            "description": "Standard Comptroller Impl"
+        }
+    },
+    "InterestRateModel": {
+        "WhitePaperInterestRateModel_2_30": {
+            "name": "WhitePaperInterestRateModel_2_30",
+            "contract": "WhitePaperInterestRateModel",
+            "description": "WhitePaper baseRate=20000000000000000 multiplier=300000000000000000",
+            "base": "20000000000000000",
+            "slope": "300000000000000000",
+            "address": "0xa73FEeD42b2D72B876fF9aDC236AdeE803F90732"
+        },
+        "WhitePaperInterestRateModel_1_40": {
+            "name": "WhitePaperInterestRateModel_1_40",
+            "contract": "WhitePaperInterestRateModel",
+            "description": "WhitePaper baseRate=10000000000000000 multiplier=400000000000000000",
+            "base": "10000000000000000",
+            "slope": "400000000000000000",
+            "address": "0xd9699f978b364cdB4BDAeDf5eB0c1Bf70af6aCD7"
+        }
+    }
+}
