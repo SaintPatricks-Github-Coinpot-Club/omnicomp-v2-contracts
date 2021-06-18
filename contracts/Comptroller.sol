@@ -245,6 +245,9 @@ contract Comptroller is ComptrollerV3Storage, ComptrollerInterface, ComptrollerE
             return uint(Error.MARKET_NOT_LISTED);
         }
 
+        // update the asset price 
+        oracle.updatePrice(CToken(cToken));
+
         // Keep the flywheel moving
         updateCompSupplyIndex(cToken);
         distributeSupplierComp(cToken, minter, false);
@@ -280,6 +283,9 @@ contract Comptroller is ComptrollerV3Storage, ComptrollerInterface, ComptrollerE
      * @return 0 if the redeem is allowed, otherwise a semi-opaque error code (See ErrorReporter.sol)
      */
     function redeemAllowed(address cToken, address redeemer, uint redeemTokens) external returns (uint) {
+        // update the asset price 
+        oracle.updatePrice(CToken(cToken));
+
         uint allowed = redeemAllowedInternal(cToken, redeemer, redeemTokens);
         if (allowed != uint(Error.NO_ERROR)) {
             return allowed;
@@ -361,6 +367,9 @@ contract Comptroller is ComptrollerV3Storage, ComptrollerInterface, ComptrollerE
             assert(markets[cToken].accountMembership[borrower]);
         }
 
+        // update the asset price 
+        oracle.updatePrice(CToken(cToken));
+
         if (oracle.getUnderlyingPrice(CToken(cToken)) == 0) {
             return uint(Error.PRICE_ERROR);
         }
@@ -421,6 +430,9 @@ contract Comptroller is ComptrollerV3Storage, ComptrollerInterface, ComptrollerE
             return uint(Error.MARKET_NOT_LISTED);
         }
 
+        // update the asset price 
+        oracle.updatePrice(CToken(cToken));
+
         // Keep the flywheel moving
         Exp memory borrowIndex = Exp({mantissa: CToken(cToken).borrowIndex()});
         updateCompBorrowIndex(cToken, borrowIndex);
@@ -475,6 +487,10 @@ contract Comptroller is ComptrollerV3Storage, ComptrollerInterface, ComptrollerE
         if (!markets[cTokenBorrowed].isListed || !markets[cTokenCollateral].isListed) {
             return uint(Error.MARKET_NOT_LISTED);
         }
+
+        // update the asset price 
+        oracle.updatePrice(CToken(cTokenBorrowed));
+        oracle.updatePrice(CToken(cTokenCollateral));
 
         /* The borrower must have shortfall in order to be liquidatable */
         (Error err, , uint shortfall) = getAccountLiquidityInternal(borrower);
@@ -555,6 +571,10 @@ contract Comptroller is ComptrollerV3Storage, ComptrollerInterface, ComptrollerE
             return uint(Error.COMPTROLLER_MISMATCH);
         }
 
+        // update the asset price 
+        oracle.updatePrice(CToken(cTokenCollateral));
+        oracle.updatePrice(CToken(cTokenBorrowed));
+
         // Keep the flywheel moving
         updateCompSupplyIndex(cTokenCollateral);
         distributeSupplierComp(cTokenCollateral, borrower, false);
@@ -601,6 +621,9 @@ contract Comptroller is ComptrollerV3Storage, ComptrollerInterface, ComptrollerE
     function transferAllowed(address cToken, address src, address dst, uint transferTokens) external returns (uint) {
         // Pausing is a very serious situation - we revert to sound the alarms
         require(!transferGuardianPaused, "transfer is paused");
+
+        // update the asset price 
+        oracle.updatePrice(CToken(cToken));
 
         // Currently the only consideration is whether or not
         //  the src is allowed to redeem this many tokens
@@ -1118,6 +1141,7 @@ contract Comptroller is ComptrollerV3Storage, ComptrollerInterface, ComptrollerE
         for (uint i = 0; i < allMarkets_.length; i++) {
             CToken cToken = allMarkets_[i];
             if (markets[address(cToken)].isComped) {
+                oracle.updatePrice(cToken);
                 Exp memory assetPrice = Exp({mantissa: oracle.getUnderlyingPrice(cToken)});
                 Exp memory utility = mul_(assetPrice, cToken.totalBorrows());
                 utilities[i] = utility;

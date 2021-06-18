@@ -3,14 +3,14 @@
         "Comp": "0x96B21093c2a33f15BB15CfA8412eF214ABe07FD4",
         "Unitroller": "0xe0ABe24815390E9cBB5fa299192c5d6eac5f298c",
         "PriceOracle": "0x87C71FC9f336a5699E675239525F1F75099e34d4",
-        "Comptroller": "0xe0ABe24815390E9cBB5fa299192c5d6eac5f298c",
+        "Comptroller": "0xe51aA80c0222E246e8cDF3a6eD48d88A257da53F",
         "WhitePaperInterestRateModel_2_30": "0x9E19DB88fb26Cc346873b236052F6375d979D292"
     },
     "Blocks": {
         "Comp": 15507414,
         "Unitroller": 15507737,
         "PriceOracle": 15507738,
-        "Comptroller": 15507740,
+        "Comptroller": 15847020,
         "WhitePaperInterestRateModel_2_30": 15507770
     },
     "PriceOracle": {
@@ -23,7 +23,7 @@
     },
     "Comptroller": {
         "Comptroller": {
-            "address": "0x285A6d43CF20a6c1E4D863fB2457d378a294bA20",
+            "address": "0xe51aA80c0222E246e8cDF3a6eD48d88A257da53F",
             "contract": "Comptroller",
             "description": "Standard Comptroller Impl"
         }
