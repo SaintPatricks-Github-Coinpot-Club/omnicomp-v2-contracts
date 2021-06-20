@@ -813,15 +813,9 @@
             "signature": "0xdcfbc0c7"
         }
     ],
-    "PriceOracle": [
+    "Comptroller": [
         {
-            "inputs": [
-                {
-                    "internalType": "address",
-                    "name": "comptroller_",
-                    "type": "address"
-                }
-            ],
+            "inputs": [],
             "payable": false,
             "stateMutability": "nonpayable",
             "type": "constructor",
@@ -831,13 +825,39 @@
             "anonymous": false,
             "inputs": [
                 {
-                    "indexed": true,
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "error",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "info",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "detail",
+                    "type": "uint256"
+                }
+            ],
+            "name": "Failure",
+            "type": "event",
+            "signature": "0x45b96fe442630264581b197e84bbada861235052c5a1aadfff9ea4e40a969aa0"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
                     "internalType": "address",
                     "name": "oldAdmin",
                     "type": "address"
                 },
                 {
-                    "indexed": true,
+                    "indexed": false,
                     "internalType": "address",
                     "name": "newAdmin",
                     "type": "address"
@@ -851,59 +871,61 @@
             "anonymous": false,
             "inputs": [
                 {
-                    "indexed": true,
+                    "indexed": false,
                     "internalType": "address",
-                    "name": "oldPoster",
+                    "name": "oldImplementation",
                     "type": "address"
                 },
                 {
-                    "indexed": true,
+                    "indexed": false,
                     "internalType": "address",
-                    "name": "newPoster",
+                    "name": "newImplementation",
                     "type": "address"
                 }
             ],
-            "name": "NewPoster",
+            "name": "NewImplementation",
             "type": "event",
-            "signature": "0xd8209502cb6dab3843acd5ce51ae027a6f3488c57c2d4aedac2d94501dfcfc8d"
+            "signature": "0xd604de94d45953f9138079ec1b82d533cb2160c906d1076d1f7ed54befbca97a"
         },
         {
             "anonymous": false,
             "inputs": [
                 {
-                    "indexed": true,
+                    "indexed": false,
                     "internalType": "address",
-                    "name": "asset",
-                    "type": "address"
-                },
-                {
-                    "indexed": true,
-                    "internalType": "address",
-                    "name": "postedBy",
+                    "name": "oldPendingAdmin",
                     "type": "address"
                 },
                 {
                     "indexed": false,
-                    "internalType": "uint256",
-                    "name": "previousPriceMantissa",
-                    "type": "uint256"
-                },
-                {
-                    "indexed": true,
-                    "internalType": "uint256",
-                    "name": "requestedPriceMantissa",
-                    "type": "uint256"
-                },
-                {
-                    "indexed": false,
-                    "internalType": "uint256",
-                    "name": "newPriceMantissa",
-                    "type": "uint256"
+                    "internalType": "address",
+                    "name": "newPendingAdmin",
+                    "type": "address"
                 }
             ],
-            "name": "PricePosted",
+            "name": "NewPendingAdmin",
             "type": "event",
-            "signature": "0xee7aa1809348e0f32177d04baf37df86a10ef3337729271eeff50db46e199190"
+            "signature": "0xca4f2f25d0898edd99413412fb94012f9e54ec8142f9b093e7720646a95b16a9"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "address",
+                    "name": "oldPendingImplementation",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "address",
+                    "name": "newPendingImplementation",
+                    "type": "address"
+                }
+            ],
+            "name": "NewPendingImplementation",
+            "type": "event",
+            "signature": "0xe945ccee5d701fc83f9b8aa8ca94ea4219ec1fcbd4f4cab4f0ea57c5c3e1d815"
         },
         {
             "payable": true,
@@ -912,35 +934,79 @@
         },
         {
             "constant": false,
-            "inputs": [
+            "inputs": [],
+            "name": "_acceptAdmin",
+            "outputs": [
                 {
-                    "internalType": "address payable",
-                    "name": "newAdmin",
-                    "type": "address"
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
                 }
             ],
-            "name": "_setAdmin",
-            "outputs": [],
             "payable": false,
             "stateMutability": "nonpayable",
             "type": "function",
-            "signature": "0x3a74a767"
+            "signature": "0xe9c714f2"
+        },
+        {
+            "constant": false,
+            "inputs": [],
+            "name": "_acceptImplementation",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function",
+            "signature": "0xc1e80334"
         },
         {
             "constant": false,
             "inputs": [
                 {
-                    "internalType": "address payable",
-                    "name": "newPoster",
+                    "internalType": "address",
+                    "name": "newPendingAdmin",
                     "type": "address"
                 }
             ],
-            "name": "_setPoster",
-            "outputs": [],
+            "name": "_setPendingAdmin",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
             "payable": false,
             "stateMutability": "nonpayable",
             "type": "function",
-            "signature": "0x5d496818"
+            "signature": "0xb71d1a0c"
+        },
+        {
+            "constant": false,
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "newPendingImplementation",
+                    "type": "address"
+                }
+            ],
+            "name": "_setPendingImplementation",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "function",
+            "signature": "0xe992a041"
         },
         {
             "constant": true,
@@ -948,7 +1014,7 @@
             "name": "admin",
             "outputs": [
                 {
-                    "internalType": "address payable",
+                    "internalType": "address",
                     "name": "",
                     "type": "address"
                 }
@@ -960,146 +1026,51 @@
         },
         {
             "constant": true,
-            "inputs": [
+            "inputs": [],
+            "name": "comptrollerImplementation",
+            "outputs": [
                 {
                     "internalType": "address",
-                    "name": "asset",
-                    "type": "address"
-                }
-            ],
-            "name": "assetPrices",
-            "outputs": [
-                {
-                    "internalType": "uint256",
                     "name": "",
-                    "type": "uint256"
+                    "type": "address"
                 }
             ],
             "payable": false,
             "stateMutability": "view",
             "type": "function",
-            "signature": "0x5e9a523c"
+            "signature": "0xbb82aa5e"
         },
         {
             "constant": true,
             "inputs": [],
-            "name": "comptroller",
+            "name": "pendingAdmin",
             "outputs": [
-                {
-                    "internalType": "contract Comptroller",
-                    "name": "",
-                    "type": "address"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function",
-            "signature": "0x5fe3b567"
-        },
-        {
-            "constant": true,
-            "inputs": [
-                {
-                    "internalType": "contract CToken",
-                    "name": "cToken",
-                    "type": "address"
-                }
-            ],
-            "name": "getUnderlyingPrice",
-            "outputs": [
-                {
-                    "internalType": "uint256",
-                    "name": "",
-                    "type": "uint256"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function",
-            "signature": "0xfc57d4df"
-        },
-        {
-            "constant": true,
-            "inputs": [],
-            "name": "isPriceOracle",
-            "outputs": [
-                {
-                    "internalType": "bool",
-                    "name": "",
-                    "type": "bool"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function",
-            "signature": "0x66331bba"
-        },
-        {
-            "constant": true,
-            "inputs": [],
-            "name": "poster",
-            "outputs": [
-                {
-                    "internalType": "address payable",
-                    "name": "",
-                    "type": "address"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function",
-            "signature": "0x80959721"
-        },
-        {
-            "constant": false,
-            "inputs": [
                 {
                     "internalType": "address",
-                    "name": "asset",
+                    "name": "",
                     "type": "address"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "priceMantissa",
-                    "type": "uint256"
                 }
             ],
-            "name": "setDirectPrice",
-            "outputs": [],
             "payable": false,
-            "stateMutability": "nonpayable",
+            "stateMutability": "view",
             "type": "function",
-            "signature": "0x09a8acb0"
+            "signature": "0x26782247"
         },
         {
-            "constant": false,
-            "inputs": [
+            "constant": true,
+            "inputs": [],
+            "name": "pendingComptrollerImplementation",
+            "outputs": [
                 {
-                    "internalType": "contract CToken",
-                    "name": "cToken",
+                    "internalType": "address",
+                    "name": "",
                     "type": "address"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "underlyingPriceMantissa",
-                    "type": "uint256"
                 }
             ],
-            "name": "setUnderlyingPrice",
-            "outputs": [],
             "payable": false,
-            "stateMutability": "nonpayable",
+            "stateMutability": "view",
             "type": "function",
-            "signature": "0x127ffda0"
-        }
-    ],
-    "Comptroller": [
-        {
-            "inputs": [],
-            "payable": false,
-            "stateMutability": "nonpayable",
-            "type": "constructor",
-            "signature": "constructor"
+            "signature": "0xdcfbc0c7"
         },
         {
             "anonymous": false,
@@ -1230,32 +1201,6 @@
             "name": "DistributedSupplierComp",
             "type": "event",
             "signature": "0x2caecd17d02f56fa897705dcc740da2d237c373f70686f4e0d9bd3bf0400ea7a"
-        },
-        {
-            "anonymous": false,
-            "inputs": [
-                {
-                    "indexed": false,
-                    "internalType": "uint256",
-                    "name": "error",
-                    "type": "uint256"
-                },
-                {
-                    "indexed": false,
-                    "internalType": "uint256",
-                    "name": "info",
-                    "type": "uint256"
-                },
-                {
-                    "indexed": false,
-                    "internalType": "uint256",
-                    "name": "detail",
-                    "type": "uint256"
-                }
-            ],
-            "name": "Failure",
-            "type": "event",
-            "signature": "0x45b96fe442630264581b197e84bbada861235052c5a1aadfff9ea4e40a969aa0"
         },
         {
             "anonymous": false,
@@ -1859,22 +1804,6 @@
         },
         {
             "constant": true,
-            "inputs": [],
-            "name": "admin",
-            "outputs": [
-                {
-                    "internalType": "address",
-                    "name": "",
-                    "type": "address"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function",
-            "signature": "0xf851a440"
-        },
-        {
-            "constant": true,
             "inputs": [
                 {
                     "internalType": "uint256",
@@ -2285,22 +2214,6 @@
             "stateMutability": "view",
             "type": "function",
             "signature": "0x6b79c38d"
-        },
-        {
-            "constant": true,
-            "inputs": [],
-            "name": "comptrollerImplementation",
-            "outputs": [
-                {
-                    "internalType": "address",
-                    "name": "",
-                    "type": "address"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function",
-            "signature": "0xbb82aa5e"
         },
         {
             "constant": false,
@@ -2813,38 +2726,6 @@
             "signature": "0x24a3d622"
         },
         {
-            "constant": true,
-            "inputs": [],
-            "name": "pendingAdmin",
-            "outputs": [
-                {
-                    "internalType": "address",
-                    "name": "",
-                    "type": "address"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function",
-            "signature": "0x26782247"
-        },
-        {
-            "constant": true,
-            "inputs": [],
-            "name": "pendingComptrollerImplementation",
-            "outputs": [
-                {
-                    "internalType": "address",
-                    "name": "",
-                    "type": "address"
-                }
-            ],
-            "payable": false,
-            "stateMutability": "view",
-            "type": "function",
-            "signature": "0xdcfbc0c7"
-        },
-        {
             "constant": false,
             "inputs": [
                 {
@@ -3170,6 +3051,416 @@
         }
     ],
     "WhitePaperInterestRateModel_2_30": [
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "baseRatePerYear",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "multiplierPerYear",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "constructor",
+            "signature": "constructor"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "baseRatePerBlock",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "multiplierPerBlock",
+                    "type": "uint256"
+                }
+            ],
+            "name": "NewInterestParams",
+            "type": "event",
+            "signature": "0xf35fa19c15e9ba782633a5df62a98b20217151addc68e3ff2cd623a48d37ec27"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "baseRatePerBlock",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function",
+            "signature": "0xf14039de"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "blocksPerYear",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function",
+            "signature": "0xa385fb96"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "cash",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "borrows",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "reserves",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getBorrowRate",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function",
+            "signature": "0x15f24053"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "cash",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "borrows",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "reserves",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "reserveFactorMantissa",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getSupplyRate",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function",
+            "signature": "0xb8168816"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "isInterestRateModel",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function",
+            "signature": "0x2191f92a"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "multiplierPerBlock",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function",
+            "signature": "0x8726bb89"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "cash",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "borrows",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "reserves",
+                    "type": "uint256"
+                }
+            ],
+            "name": "utilizationRate",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "pure",
+            "type": "function",
+            "signature": "0x6e71e2d8"
+        }
+    ],
+    "WhitePaperInterestRateModel_005_20": [
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "baseRatePerYear",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "multiplierPerYear",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "nonpayable",
+            "type": "constructor",
+            "signature": "constructor"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "baseRatePerBlock",
+                    "type": "uint256"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "multiplierPerBlock",
+                    "type": "uint256"
+                }
+            ],
+            "name": "NewInterestParams",
+            "type": "event",
+            "signature": "0xf35fa19c15e9ba782633a5df62a98b20217151addc68e3ff2cd623a48d37ec27"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "baseRatePerBlock",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function",
+            "signature": "0xf14039de"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "blocksPerYear",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function",
+            "signature": "0xa385fb96"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "cash",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "borrows",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "reserves",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getBorrowRate",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function",
+            "signature": "0x15f24053"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "cash",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "borrows",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "reserves",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "reserveFactorMantissa",
+                    "type": "uint256"
+                }
+            ],
+            "name": "getSupplyRate",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function",
+            "signature": "0xb8168816"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "isInterestRateModel",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function",
+            "signature": "0x2191f92a"
+        },
+        {
+            "constant": true,
+            "inputs": [],
+            "name": "multiplierPerBlock",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "view",
+            "type": "function",
+            "signature": "0x8726bb89"
+        },
+        {
+            "constant": true,
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "cash",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "borrows",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "reserves",
+                    "type": "uint256"
+                }
+            ],
+            "name": "utilizationRate",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "payable": false,
+            "stateMutability": "pure",
+            "type": "function",
+            "signature": "0x6e71e2d8"
+        }
+    ],
+    "WhitePaperInterestRateModel_005_05": [
         {
             "inputs": [
                 {

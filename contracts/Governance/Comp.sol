@@ -3,16 +3,16 @@ pragma experimental ABIEncoderV2;
 
 contract Comp {
     /// @notice EIP-20 token name for this token
-    string public constant name = "DINOT";
+    string public constant name = "Omni COMP Governance Token";
 
     /// @notice EIP-20 token symbol for this token
-    string public constant symbol = "DINOT Test Token";
+    string public constant symbol = "OMNIC";
 
     /// @notice EIP-20 token decimals for this token
     uint8 public constant decimals = 18;
 
     /// @notice Total number of tokens in circulation
-    uint public constant totalSupply = 100000000e18; // 100 million OMNIC
+    uint public constant totalSupply = 10000000e18; // 10 million OMNIC
 
     /// @notice Allowance amounts on behalf of others
     mapping (address => mapping (address => uint96)) internal allowances;

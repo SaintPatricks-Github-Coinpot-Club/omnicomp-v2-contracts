@@ -258,10 +258,10 @@ module.exports = {
         {unlocked: 0}
       ]
     },
-    matic: {
+    polygon: {
       providers: [
         {env: "PROVIDER"},
-        {file: "~/.ethereum/matic-url"}, 
+        {file: "~/.ethereum/polygon-url"}, 
       ],
       web3: {
         gas: [
@@ -279,7 +279,7 @@ module.exports = {
       },
       accounts: [
         {env: "ACCOUNT"},
-        {file: "~/.ethereum/matic"},                        // Load from given file with contents as the private key (e.g. 0x...)
+        {file: "~/.ethereum/polygon"},                        // Load from given file with contents as the private key (e.g. 0x...)
         {unlocked: 0}
       ]
     },
