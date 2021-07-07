@@ -258,6 +258,31 @@ module.exports = {
         {unlocked: 0}
       ]
     },
+    polygon: {
+      providers: [
+        {env: "PROVIDER"},
+        {file: "~/.ethereum/polygon-url"}, 
+      ],
+      web3: {
+        gas: [
+          {env: "GAS"},
+          {default: "10000000"}
+        ],
+        gas_price: [
+          {env: "GAS_PRICE"},
+          {default: "15000000000"}
+        ],
+        options: {
+          transactionConfirmationBlocks: 1,
+          transactionBlockTimeout: 5
+        }
+      },
+      accounts: [
+        {env: "ACCOUNT"},
+        {file: "~/.ethereum/polygon"},                        // Load from given file with contents as the private key (e.g. 0x...)
+        {unlocked: 0}
+      ]
+    },
   },
   get_network_file: (network) => {
     return null;

@@ -7,6 +7,12 @@ contract PriceOracle {
     bool public constant isPriceOracle = true;
 
     /**
+      * @notice Update the price of an underlying asset
+      * @param cToken The cToken to update the underlying price of
+      */
+    function updatePrice(CToken cToken) external;
+
+    /**
       * @notice Get the underlying price of a cToken asset
       * @param cToken The cToken to get the underlying price of
       * @return The underlying asset price mantissa (scaled by 1e18).

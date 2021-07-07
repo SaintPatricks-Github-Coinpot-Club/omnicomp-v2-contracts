@@ -1,7 +1,7 @@
 {
-  "name": "compound-protocol",
+  "name": "omnicomp-v2",
   "version": "0.2.1",
-  "description": "The Compound Money Market",
+  "description": "OmniCOMP - Stablecoin minter and money market",
   "main": "index.js",
   "scripts": {
     "compile": "./script/compile",
