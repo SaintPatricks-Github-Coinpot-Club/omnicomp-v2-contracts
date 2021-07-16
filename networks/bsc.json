@@ -1,17 +1,17 @@
 {
     "Unitroller": {
         "description": "Unitroller",
-        "address": "0x0aBBAba95439dAbc12a6bA59E0713a722a05cB31"
+        "address": "0xC83FEB6a9D47346B94d7353243CaEe5C1bfEeCC2"
     },
     "Contracts": {
         "WhitePaperInterestRateModel_05_7": "0xc57C7f4E90c3e900AE88c14dd14D5bB43E72dc30",
         "WhitePaperInterestRateModel_05_8": "0xEfEFC17D4d55bd5a0cfcdd3E5A3C3Cb9bd6557f7",
         "WhitePaperInterestRateModel_05_9": "0x348F503e66b344E43Fccd115F230BC5839606F89",
-        "PriceOracle": "0xc0A716967C95B0044610D40038f789Df5D6b71ee",
+        "PriceOracle": "0x5023cCDdA955Fa28925D75a222818DaCcE1A76b0",
         "WhitePaperInterestRateModel_1_40": "0xd9699f978b364cdB4BDAeDf5eB0c1Bf70af6aCD7",
-        "WhitePaperInterestRateModel_2_30": "0xa73FEeD42b2D72B876fF9aDC236AdeE803F90732",
-        "Unitroller": "0x0aBBAba95439dAbc12a6bA59E0713a722a05cB31",
-        "Comptroller": "0x0aBBAba95439dAbc12a6bA59E0713a722a05cB31",
+        "WhitePaperInterestRateModel_2_30": "0x69f34F72BbAeDD0Bf9569FDc0566Afc385662e15",
+        "Unitroller": "0xC83FEB6a9D47346B94d7353243CaEe5C1bfEeCC2",
+        "Comptroller": "0xC83FEB6a9D47346B94d7353243CaEe5C1bfEeCC2",
         "WhitePaperInterestRateModel_05_30": "0xE38D90C1fDd199f40f9Efa5F2a704092d7453793",
         "WhitePaperInterestRateModel_05_20": "0x6c3005190C06E536c9b968E30b783B6aEFf49db1",
         "WhitePaperInterestRateModel_05_10": "0xaB09C0d91ea4eE4A80701Be23FD9fd391Cbd3D58",
@@ -44,7 +44,7 @@
         "WhitePaperInterestRateModel_05_7": "0x0000000000000000000000000000000000000000000000000011c37937e0800000000000000000000000000000000000000000000000000000f8b0a10e470000",
         "WhitePaperInterestRateModel_05_8": "0x0000000000000000000000000000000000000000000000000011c37937e08000000000000000000000000000000000000000000000000000011c37937e080000",
         "WhitePaperInterestRateModel_05_9": "0x0000000000000000000000000000000000000000000000000011c37937e08000000000000000000000000000000000000000000000000000013fbe85edc90000",
-        "PriceOracle": "0x0000000000000000000000000abbaba95439dabc12a6ba59e0713a722a05cb31",
+        "PriceOracle": "0x000000000000000000000000c83feb6a9d47346b94d7353243caee5c1bfeecc2",
         "WhitePaperInterestRateModel_1_40": "0x000000000000000000000000000000000000000000000000002386f26fc10000000000000000000000000000000000000000000000000000058d15e176280000",
         "WhitePaperInterestRateModel_2_30": "0x00000000000000000000000000000000000000000000000000470de4df8200000000000000000000000000000000000000000000000000000429d069189e0000",
         "Unitroller": "0x",
@@ -81,11 +81,11 @@
         "WhitePaperInterestRateModel_05_7": 8024749,
         "WhitePaperInterestRateModel_05_8": 8024761,
         "WhitePaperInterestRateModel_05_9": 8024772,
-        "PriceOracle": 7996011,
+        "PriceOracle": 8715297,
         "WhitePaperInterestRateModel_1_40": 7996157,
-        "WhitePaperInterestRateModel_2_30": 7996030,
-        "Unitroller": 7996008,
-        "Comptroller": 7996014,
+        "WhitePaperInterestRateModel_2_30": 8715313,
+        "Unitroller": 8715295,
+        "Comptroller": 8715299,
         "WhitePaperInterestRateModel_05_30": 8025191,
         "WhitePaperInterestRateModel_05_20": 8024972,
         "WhitePaperInterestRateModel_05_10": 8024794,
@@ -116,11 +116,11 @@
     },
     "PriceOracle": {
         "description": "Price oracle",
-        "address": "0xc0A716967C95B0044610D40038f789Df5D6b71ee"
+        "address": "0x5023cCDdA955Fa28925D75a222818DaCcE1A76b0"
     },
     "Comptroller": {
         "Comptroller": {
-            "address": "0xd211E0bD143CFcA36884a9D5835311494b040a78",
+            "address": "0x66593931F83f77fA64B9d62607225a8943750b3C",
             "contract": "Comptroller",
             "description": "Standard Comptroller Impl"
         }
@@ -164,7 +164,7 @@
             "description": "WhitePaper baseRate=20000000000000000 multiplier=300000000000000000",
             "base": "20000000000000000",
             "slope": "300000000000000000",
-            "address": "0xa73FEeD42b2D72B876fF9aDC236AdeE803F90732"
+            "address": "0x69f34F72BbAeDD0Bf9569FDc0566Afc385662e15"
         },
         "WhitePaperInterestRateModel_05_30": {
             "name": "WhitePaperInterestRateModel_05_30",
