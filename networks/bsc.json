@@ -14,6 +14,8 @@
         "WhitePaperInterestRateModel_2_30": "0xa73FEeD42b2D72B876fF9aDC236AdeE803F90732",
         "Unitroller": "0x0aBBAba95439dAbc12a6bA59E0713a722a05cB31",
         "Comptroller": "0xB645715834DF6824f059A86EB56B1c88430DE2Fd",
+        "WhitePaperInterestRateModel_05_80": "0x6d75dEDA8b4E0c114e6B6e30580e207198B36C66",
+        "WhitePaperInterestRateModel_05_70": "0x4A671144f63A0BBb69C7a40C854A82765CBA08fa",
         "WhitePaperInterestRateModel_05_50": "0xd301eeA7C18A5E747C8Ec1800A2eCFff518eE2d2",
         "WhitePaperInterestRateModel_05_30": "0xE38D90C1fDd199f40f9Efa5F2a704092d7453793",
         "WhitePaperInterestRateModel_05_20": "0x6c3005190C06E536c9b968E30b783B6aEFf49db1",
@@ -27,6 +29,7 @@
         "WhitePaperInterestRateModel_05_45": "0x5B513d7C121884148D3e7AC9882c0C89026EEA7d",
         "WhitePaperInterestRateModel_05_13": "0x426eFc3401BB09C1C72f5D47F89a9291829B4b8B",
         "WhitePaperInterestRateModel_05_24": "0xE79De6D6481A88c6261EdfcE6360A93Ed531f0EC",
+        "WhitePaperInterestRateModel_05_100": "0xC2DCb6b28F211cc5E9d5b67B6c8E685e25Fc59B4",
         "WhitePaperInterestRateModel_05_1": "0xcE75AAc4a566D2694aA9Af1A88BDbf89Fa8Bb833",
         "WhitePaperInterestRateModel_05_14": "0x296e5981FeE506B7584E1b7AaC849443Bae7Af54",
         "WhitePaperInterestRateModel_05_25": "0x300C23C03D5638A4FB45443CEdBf0edb296547f1",
@@ -56,6 +59,8 @@
         "WhitePaperInterestRateModel_2_30": "0x00000000000000000000000000000000000000000000000000470de4df8200000000000000000000000000000000000000000000000000000429d069189e0000",
         "Unitroller": "0x",
         "Comptroller": "0x",
+        "WhitePaperInterestRateModel_05_80": "0x0000000000000000000000000000000000000000000000000011c37937e080000000000000000000000000000000000000000000000000000b1a2bc2ec500000",
+        "WhitePaperInterestRateModel_05_70": "0x0000000000000000000000000000000000000000000000000011c37937e0800000000000000000000000000000000000000000000000000009b6e64a8ec60000",
         "WhitePaperInterestRateModel_05_50": "0x0000000000000000000000000000000000000000000000000011c37937e0800000000000000000000000000000000000000000000000000006f05b59d3b20000",
         "WhitePaperInterestRateModel_05_30": "0x0000000000000000000000000000000000000000000000000011c37937e080000000000000000000000000000000000000000000000000000429d069189e0000",
         "WhitePaperInterestRateModel_05_20": "0x0000000000000000000000000000000000000000000000000011c37937e0800000000000000000000000000000000000000000000000000002c68af0bb140000",
@@ -69,6 +74,7 @@
         "WhitePaperInterestRateModel_05_45": "0x0000000000000000000000000000000000000000000000000011c37937e08000000000000000000000000000000000000000000000000000063eb89da4ed0000",
         "WhitePaperInterestRateModel_05_13": "0x0000000000000000000000000000000000000000000000000011c37937e0800000000000000000000000000000000000000000000000000001cdda4faccd0000",
         "WhitePaperInterestRateModel_05_24": "0x0000000000000000000000000000000000000000000000000011c37937e080000000000000000000000000000000000000000000000000000354a6ba7a180000",
+        "WhitePaperInterestRateModel_05_100": "0x0000000000000000000000000000000000000000000000000011c37937e080000000000000000000000000000000000000000000000000000de0b6b3a7640000",
         "WhitePaperInterestRateModel_05_1": "0x0000000000000000000000000000000000000000000000000011c37937e08000000000000000000000000000000000000000000000000000002386f26fc10000",
         "WhitePaperInterestRateModel_05_14": "0x0000000000000000000000000000000000000000000000000011c37937e0800000000000000000000000000000000000000000000000000001f161421c8e0000",
         "WhitePaperInterestRateModel_05_25": "0x0000000000000000000000000000000000000000000000000011c37937e0800000000000000000000000000000000000000000000000000003782dace9d90000",
@@ -98,6 +104,8 @@
         "WhitePaperInterestRateModel_2_30": 7996030,
         "Unitroller": 7996008,
         "Comptroller": 8936563,
+        "WhitePaperInterestRateModel_05_80": 9516500,
+        "WhitePaperInterestRateModel_05_70": 9516472,
         "WhitePaperInterestRateModel_05_50": 9490312,
         "WhitePaperInterestRateModel_05_30": 8025191,
         "WhitePaperInterestRateModel_05_20": 8024972,
@@ -111,6 +119,7 @@
         "WhitePaperInterestRateModel_05_45": 9490270,
         "WhitePaperInterestRateModel_05_13": 8024871,
         "WhitePaperInterestRateModel_05_24": 8025010,
+        "WhitePaperInterestRateModel_05_100": 9516511,
         "WhitePaperInterestRateModel_05_1": 8024202,
         "WhitePaperInterestRateModel_05_14": 8024880,
         "WhitePaperInterestRateModel_05_25": 8025144,
@@ -196,6 +205,22 @@
             "base": "20000000000000000",
             "slope": "300000000000000000",
             "address": "0xa73FEeD42b2D72B876fF9aDC236AdeE803F90732"
+        },
+        "WhitePaperInterestRateModel_05_80": {
+            "name": "WhitePaperInterestRateModel_05_80",
+            "contract": "WhitePaperInterestRateModel",
+            "description": "WhitePaper baseRate=5000000000000000 multiplier=800000000000000000",
+            "base": "5000000000000000",
+            "slope": "800000000000000000",
+            "address": "0x6d75dEDA8b4E0c114e6B6e30580e207198B36C66"
+        },
+        "WhitePaperInterestRateModel_05_70": {
+            "name": "WhitePaperInterestRateModel_05_70",
+            "contract": "WhitePaperInterestRateModel",
+            "description": "WhitePaper baseRate=5000000000000000 multiplier=700000000000000000",
+            "base": "5000000000000000",
+            "slope": "700000000000000000",
+            "address": "0x4A671144f63A0BBb69C7a40C854A82765CBA08fa"
         },
         "WhitePaperInterestRateModel_05_50": {
             "name": "WhitePaperInterestRateModel_05_50",
@@ -300,6 +325,14 @@
             "base": "5000000000000000",
             "slope": "240000000000000000",
             "address": "0xE79De6D6481A88c6261EdfcE6360A93Ed531f0EC"
+        },
+        "WhitePaperInterestRateModel_05_100": {
+            "name": "WhitePaperInterestRateModel_05_100",
+            "contract": "WhitePaperInterestRateModel",
+            "description": "WhitePaper baseRate=5000000000000000 multiplier=1000000000000000000",
+            "base": "5000000000000000",
+            "slope": "1000000000000000000",
+            "address": "0xC2DCb6b28F211cc5E9d5b67B6c8E685e25Fc59B4"
         },
         "WhitePaperInterestRateModel_05_1": {
             "name": "WhitePaperInterestRateModel_05_1",
