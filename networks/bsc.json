@@ -13,7 +13,7 @@
         "WhitePaperInterestRateModel_1_40": "0xd9699f978b364cdB4BDAeDf5eB0c1Bf70af6aCD7",
         "WhitePaperInterestRateModel_2_30": "0xa73FEeD42b2D72B876fF9aDC236AdeE803F90732",
         "Unitroller": "0x0aBBAba95439dAbc12a6bA59E0713a722a05cB31",
-        "Comptroller": "0xB645715834DF6824f059A86EB56B1c88430DE2Fd",
+        "Comptroller": "0xBb35b9E28c2212A75bf26B45713DE8C3375F8FC4",
         "WhitePaperInterestRateModel_05_80": "0x6d75dEDA8b4E0c114e6B6e30580e207198B36C66",
         "WhitePaperInterestRateModel_05_70": "0x4A671144f63A0BBb69C7a40C854A82765CBA08fa",
         "WhitePaperInterestRateModel_05_180": "0x385f6b63Af11CD4613987eC700F2B3FB1Df230c0",
@@ -113,7 +113,7 @@
         "WhitePaperInterestRateModel_1_40": 7996157,
         "WhitePaperInterestRateModel_2_30": 7996030,
         "Unitroller": 7996008,
-        "Comptroller": 8936563,
+        "Comptroller": 9537290,
         "WhitePaperInterestRateModel_05_80": 9516500,
         "WhitePaperInterestRateModel_05_70": 9516472,
         "WhitePaperInterestRateModel_05_180": 9562541,
@@ -159,7 +159,7 @@
     },
     "Comptroller": {
         "Comptroller": {
-            "address": "0xB645715834DF6824f059A86EB56B1c88430DE2Fd",
+            "address": "0xBb35b9E28c2212A75bf26B45713DE8C3375F8FC4",
             "contract": "Comptroller",
             "description": "Standard Comptroller Impl"
         }
