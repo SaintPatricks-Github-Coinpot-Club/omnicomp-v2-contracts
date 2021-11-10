@@ -1,7 +1,7 @@
 {
     "Unitroller": {
         "description": "Unitroller",
-        "address": "0xe84088da45F48E9393a834352278C94D644Ef888"
+        "address": "0x61ff0E6Aa2eE0F667De0A942A57b403C26cb9bFd"
     },
     "Contracts": {
         "WhitePaperInterestRateModel_05_7": "0xc57C7f4E90c3e900AE88c14dd14D5bB43E72dc30",
@@ -9,9 +9,9 @@
         "WhitePaperInterestRateModel_05_9": "0x348F503e66b344E43Fccd115F230BC5839606F89",
         "PriceOracle": "0x59Bb413bD333A072AC9823b430cA1a112800362A",
         "WhitePaperInterestRateModel_1_40": "0xd9699f978b364cdB4BDAeDf5eB0c1Bf70af6aCD7",
-        "WhitePaperInterestRateModel_2_30": "0xa1f82D05c599B54241E8b3244CB323965b7dbD08",
-        "Unitroller": "0xe84088da45F48E9393a834352278C94D644Ef888",
-        "Comptroller": "0xe84088da45F48E9393a834352278C94D644Ef888",
+        "WhitePaperInterestRateModel_2_30": "0x8B275AA4ACa5e4f221a799a7579b360c65d97B1D",
+        "Unitroller": "0x61ff0E6Aa2eE0F667De0A942A57b403C26cb9bFd",
+        "Comptroller": "0x61ff0E6Aa2eE0F667De0A942A57b403C26cb9bFd",
         "WhitePaperInterestRateModel_05_30": "0xE38D90C1fDd199f40f9Efa5F2a704092d7453793",
         "WhitePaperInterestRateModel_05_20": "0x6c3005190C06E536c9b968E30b783B6aEFf49db1",
         "WhitePaperInterestRateModel_05_140": "0x2DAa06A2761e531Db2DBd712cEF580969DE2E5F5",
@@ -100,9 +100,9 @@
         "WhitePaperInterestRateModel_05_9": 8024772,
         "PriceOracle": 8136672,
         "WhitePaperInterestRateModel_1_40": 7996157,
-        "WhitePaperInterestRateModel_2_30": 10666324,
-        "Unitroller": 10666309,
-        "Comptroller": 10666312,
+        "WhitePaperInterestRateModel_2_30": 12495524,
+        "Unitroller": 12495508,
+        "Comptroller": 12495511,
         "WhitePaperInterestRateModel_05_30": 8025191,
         "WhitePaperInterestRateModel_05_20": 8024972,
         "WhitePaperInterestRateModel_05_140": 9562505,
@@ -143,7 +143,7 @@
     },
     "Comptroller": {
         "Comptroller": {
-            "address": "0x6bc405F45Bd4de7C7d4e234221B1158C16807E35",
+            "address": "0xC60A5d3F6A4899602dbE505B90d6679B80D18C58",
             "contract": "Comptroller",
             "description": "Standard Comptroller Impl"
         }
@@ -203,7 +203,7 @@
             "description": "WhitePaper baseRate=20000000000000000 multiplier=300000000000000000",
             "base": "20000000000000000",
             "slope": "300000000000000000",
-            "address": "0xa1f82D05c599B54241E8b3244CB323965b7dbD08"
+            "address": "0x8B275AA4ACa5e4f221a799a7579b360c65d97B1D"
         },
         "WhitePaperInterestRateModel_05_80": {
             "name": "WhitePaperInterestRateModel_05_80",
